@@ -1,27 +1,18 @@
 import RPi.GPIO as GPIO
-import time
-import sys
-import getopt
-import string 
-import datetime
-import select
-import sys
-import os
 
-def separator():
-	print " "	
-	print "=============================================================================="
-	print " "	
-
+#http://www.termsys.demon.co.uk/vtansi.htm
 color_white = "\x1B[37;40m"
 color_red = "\x1B[31;40m"
+clear_screen = "\x1B[2J"
+cursor_home = "\x1B[H"
+white_blue = "\x1B[37;44m" 
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 test = [ 
-	[42,35],
-	[43,36],
+	[40,41],
+	[35,36],
 	[44,37],
 	[45,38],
 
@@ -31,11 +22,8 @@ test = [
 	[31,26],
 	[30,27],
 	[29,28],
+	[22,39],
 ]
-
-print "***********************"
-print " Test CM3-Panel        "
-print "***********************"
 
 for gpios in test:
 	error_counter=0
@@ -68,8 +56,7 @@ for gpios in test:
 	if GPIO.input(gpios[0])<>0:
 		print color_red + "  Error low to hi" + color_white
 		error_counter = error_counter + 1
-
-
+			
 
 
 
