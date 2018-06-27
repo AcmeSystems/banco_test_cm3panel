@@ -1,7 +1,5 @@
 #!/usr/bin/python
-
-# monitor.py 
-# In Circuit Programming utility for FOX Board and Netus G20  
+# banco.py 
 
 # Versione per banco basato su CM3-Panel
 
@@ -16,27 +14,6 @@ import string
 import datetime
 import RPi.GPIO as GPIO
 import os
-
-# GPIO usati per inviare comandi
-#power_on=31
-#chip_enable=26
-#switch_up=27
-#switch_down=28
-#switch_toggle=29
-
-color_blue = "\x1B[34;40m"
-color_white = "\x1B[37;40m"
-
-#GPIO.setmode(GPIO.BCM)
-#GPIO.setwarnings(False) 
-#GPIO.setup(power_on, GPIO.OUT)
-#GPIO.setup(chip_enable, GPIO.OUT)
-#GPIO.setup(switch_up, GPIO.IN,pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(switch_down, GPIO.IN,pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(switch_toggle, GPIO.IN,pull_up_down=GPIO.PUD_UP)
-
-#GPIO.output(chip_enable,0)
-#GPIO.output(power_on,0)
 
 print "Banco test CM3-Panel"
 
