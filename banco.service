@@ -1,0 +1,13 @@
+[Unit]
+Description=Banco di CM3-Panel
+After=network.target
+
+[Service]
+Type=idle
+WorkingDirectory=/home/pi/banco_test_cm3panel
+ExecStart=/usr/bin/python banco.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

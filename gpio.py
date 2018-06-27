@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import RPi.GPIO as GPIO
 
 #http://www.termsys.demon.co.uk/vtansi.htm
